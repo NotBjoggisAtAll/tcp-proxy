@@ -1,0 +1,10 @@
+services:
+  tcp-proxy:
+    image: ghcr.io/notbjoggisatall/tcp-proxy:1
+    container_name: tcp-proxy
+    restart: always
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - "HOST=${HOST}"
+      - "PORT=${PORT}"
